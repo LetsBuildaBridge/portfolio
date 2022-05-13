@@ -36,4 +36,4 @@ COUNT(DISTINCT bike_id) AS num_of_bike_trips
 FROM
 `bigquery-public-data.london_bicycles.cycle_hire`
 WHERE
-duration >
+duration > 2400
