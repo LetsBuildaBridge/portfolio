@@ -1,0 +1,39 @@
+
+SELECT
+DISTINCT start_station_name
+FROM
+`bigquery-public-data.london_bicycles.cycle_hire`
+WHERE
+bike_id = 1710;
+
+
+SELECT
+COUNT (DISTINCT bike_id) AS num_of_bikes
+FROM
+`bigquery-public-data.london_bicycles.cycle_hire`
+WHERE
+end_station_name = 'Moor Street, Soho';
+
+
+SELECT
+DISTINCT start_station_id --can also use end_station_id
+FROM
+`bigquery-public-data.london_bicycles.cycle_hire`
+WHERE
+start_station_name = 'Canton Street, Poplar' --can also use end_station_name
+
+
+SELECT
+DISTINCT start_station_name --can also use end_station_name
+FROM
+`bigquery-public-data.london_bicycles.cycle_hire`
+WHERE
+start_station_id = 111 --can also use end_station_id
+
+
+SELECT
+COUNT(DISTINCT bike_id) AS num_of_bike_trips
+FROM
+`bigquery-public-data.london_bicycles.cycle_hire`
+WHERE
+duration >
